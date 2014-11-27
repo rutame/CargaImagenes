@@ -1,0 +1,220 @@
+/*
+Copyright (C) 2014 Pedro Gabriel Manrique Gutiérrez <pedrogmanrique at gmail.com>
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+*/
+/* 
+    Created on : 24-nov-2014, 21:15:21
+    Author     : Pedro Gabriel Manrique Gutiérrez <pedrogmanrique at gmail.com>
+*/
+*{
+    padding: 0; margin: 0;
+    font-family: verdana;
+    font-size: 13px;
+}
+html,
+body{
+    height: 100%;
+    background: linear-gradient(#09f, #27f);
+}
+article > header > h1{
+    font-size: 34px;
+    color: #09f;
+    padding: 10px 0;
+    width: 100%;
+    display:block;
+    float: left;
+}
+article{
+    margin: 10px 0 0 0;
+}
+body > header,
+body > footer{
+    width: 100%;
+    background: #09f;
+    padding: 10px 0;
+}
+body > header > hgroup{
+    position: relative;
+}
+hgroup{
+   color: #fff; 
+}
+#pagina{
+    width: 760px;
+    margin: 50px auto;
+    z-index: 10;
+}
+.der{
+    float:left;
+    width: 50%;height: 180px;
+    min-width: 400px;
+}
+.izq{
+    float:left;
+    width: 250px;
+}
+.mini img{
+    max-width: 220px;
+    width:100%;
+    min-width: 90px;
+    float:left;
+}
+.mini{
+    float:left;
+    padding: 5px;
+    border: 0px solid #000;
+    width: 190px;
+    margin: 2px;
+}
+input[type='file']{
+    opacity: 0;
+}
+input[type='submit']{
+    float: left;
+    width: 150px; height: 50px; 
+    border: 0;
+}
+input[type='file']{
+    width: 100px; height: 40px;
+}
+label, 
+input[type='submit']{
+    background: linear-gradient(#f00 1%,#faa 51%, #d00 51%);  
+    color: #fff;font-weight: bold; font-size: 15px;
+    border-radius: 3px;
+}
+input[type='submit']:hover{
+    background: linear-gradient(#0f0 1%,#afa 51%, #0d0 51%);  
+}
+label{
+    position: absolute;
+    width: 150px; height: 49px; 
+    line-height: 50px;
+    vertical-align: middle; 
+    text-align: center;
+    margin-left: 100px;
+}
+label:hover{
+   background: linear-gradient(#0f0 1%,#afa 51%, #0d0 51%); 
+}
+.mini a{
+    width:15px;height: 15px;
+    background: #f00;
+    float:left;
+    z-index: 1000;
+    margin: 15px 0 0 -30px;
+    border-radius: 10px;
+}
+
+.foto{
+    width: 400px;
+    min-height: 280px;
+    height: auto;
+    float: left;
+    margin: 15px 0 0 0;
+    background: #fff;
+    padding: 10px;
+    background: radial-gradient(#aaa, #fff);
+    border-radius: 5px;
+    box-shadow: 5px 5px 7px rgba(128,128,128, 0.5);
+}
+.foto > img{
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+}
+.fotos{
+    height: 560px;
+    min-width: 110px;
+    width:90%;
+    border: 1px solid #000;
+    padding: 5px;
+    overflow: scroll;
+    background: #fff;
+}
+.titulo{
+    width: 100%;
+    display:block;
+    float:left;
+    font-size: 15px;
+    margin: 10px 0 0 0;
+    text-shadow: 1px 1px #888;
+    color: #fff;
+}
+form.controles{
+    width:100%;
+}
+form.controles > input[type="range"]{
+    width: 90%;
+    height: 20px;
+    border: 0px solid #000;
+    margin: 10px 0 0 0;
+}
+span.bri,
+span.dif,
+span.sat{
+    border:1px solid cyan;
+    padding:5px;
+    float:right;
+    min-width: 14px;
+    min-height: 14px;
+    color: #fff;
+    text-shadow: 1px 1px #000;
+}
+h2{
+    font-size: 28px;
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(128,128, 128, 0.5);
+    padding: 10px 0 20px 10px;
+}
+#borda{
+    height: 60px;
+    background: rgba(128, 128, 255, 0.5);
+    width: 100%;
+    position: fixed;
+    box-shadow: 2px 2px 3px rgba(128, 128, 128, 0.5);
+    z-index: 100;
+    top:0;
+}
+.aviso{
+    width: 760px;
+    margin: 10px auto;
+}
+.aviso p{
+    width:460px;
+    float: left;    
+    color: #fff;
+    text-shadow: 1px 1px #000;
+    font-size: 16px;
+    text-align: left;
+}
+div.btn{
+    color: #fff;
+    font-weight: bold;
+    border-radius: 3px; 
+    padding: 10px;
+    float:left;
+    line-height: 13px;
+    margin: 10px 0 0 100px;
+}
+.btn_red{
+    background: linear-gradient(#f00 1%,#faa 51%, #d00 51%);
+}
+.btn_gris{
+    background: linear-gradient(#888 1%,#aaa 51%, #333 51%);
+}
+.btn_azul{
+    background: linear-gradient(#00f 1%,#aaf 51%, #00d 51%);
+}
