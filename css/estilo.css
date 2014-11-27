@@ -209,6 +209,9 @@ div.btn{
     line-height: 13px;
     margin: 10px 0 0 100px;
 }
+div.btn:hover{
+    cursor: pointer;
+}
 .btn_red{
     background: linear-gradient(#f00 1%,#faa 51%, #d00 51%);
 }
