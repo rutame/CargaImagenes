@@ -1,4 +1,12 @@
-<?php include 'config.php';?>
+<?php
+if(!isset($_COOKIE['visita'])){
+    //setcookie("visita", "si", 86400);
+
+}
+else{
+    echo "Bienvenido de Nuevo!!";
+}
+include 'config.php';?>
 <!DOCTYPE HTML>
 <html lang="en-US">
 <head>
@@ -6,8 +14,41 @@
     <title>Carga Imágenes</title>
     <link rel="stylesheet" type="text/css" href="css/estilo.css">
     <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery-cookie.js"></script>
     <script type="text/javascript">
         $(document).ready(function(){
+            var titulo = "<h1>Manipulación de Imágenes con filtros CSS</h1>";
+            var estilo = function(){
+                $(titulo).appendTo("#borda");
+                $("#borda h1").css({
+                    "color" : "white",
+                    "font-size": "34px",
+                    "width" : "700px",
+                    "margin" : "10px auto",
+                    "text-shadow" : "1px 1px #000"
+                });
+            };
+            // Cookie por un dia
+            var setCookie = function(){
+                $.cookie("visita", "si", {expires: 1});
+            };
+
+            var visita = $.cookie("visita");
+
+            if(visita === "si"){
+                alert("Bienvenido de nuevo!");
+                estilo();
+            }
+            else{
+                alert("nooo");
+                $(".aviso").show("fast");
+            }
+            $(".acepta").click(function(){
+                $(".aviso").fadeOut(300);
+                estilo();
+                setCookie();
+                alert("Cookie establecida");
+            });
             var valor = "0.0";
             $("span.bri").text(valor);
             $("span.dif").text(valor);
@@ -59,8 +100,10 @@
 <body>
     <div id="borda">
         <div class="aviso">
-            <p>Tenemos cookies señoooreees!!!</p>
-            <div class="btn btn_gris">Aceptar</div>
+            <p>Tenemos cookies señoooreees!!! <br />
+                Esta web usa cookies,
+                debes aceptar o salir de la misma.</p>
+            <div class="btn btn_gris acepta">Aceptar</div>
         </div>
     </div>
     <div id="pagina">
