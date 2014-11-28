@@ -108,21 +108,18 @@ include 'config.php';?>
     </div>
     <div id="pagina">
         <div class="izq">
-            <h2>Imágenes</h2>
             <div class="fotos">
             <?php include 'muestra.php'; ?>
             </div>
         </div>
         <div class="der">
-            <h2>Procesador</h2>
-        <form action="procesa.php" method="POST" enctype="multipart/form-data">
+            <div class="foto"></div>
+        <form action="procesa.php" method="POST" enctype="multipart/form-data" class="accion">
             <label for="archivo">Archivo</label>
             <input type="file" name="archivo" id="archivo">
             <input type="submit" value="Enviar" id="enviar">
         </form>
-            <div class="foto">
-                
-            </div>
+
             <form class="controles" method="">
                 <span class="titulo">Añadir brillo</span>
                 <input type="range" name="brillo" class="brillo" min="0" max="10" step="0.1">

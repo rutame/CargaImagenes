@@ -26,7 +26,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 html,
 body{
     height: 100%;
-    background: linear-gradient(#09f, #27f);
+    background: linear-gradient(#09f, #229);
 }
 article > header > h1{
     font-size: 34px;
@@ -52,14 +52,14 @@ hgroup{
    color: #fff; 
 }
 #pagina{
-    width: 760px;
+    width: 960px;
     margin: 50px auto;
     z-index: 10;
 }
 .der{
     float:left;
-    width: 50%;height: 180px;
-    min-width: 400px;
+    height: 180px;
+    width: 600px;
 }
 .izq{
     float:left;
@@ -91,15 +91,16 @@ input[type='submit']{
 }
 input[type='submit']:hover,
 label:hover{
-    background: linear-gradient(#0f0 1%,#afa 51%, #0d0 51%);  
+    background: linear-gradient(#0f0 1%,#afa 51%, #0d0 51%);
+    cursor: pointer;
 }
 label{
-    position: absolute;
-    width: 150px; height: 49px; 
+    float: right;
+    width: 150px;
+    height: 49px;
     line-height: 50px;
     vertical-align: middle; 
     text-align: center;
-    margin-left: 100px;
 }
 .mini a{
     width:15px;height: 15px;
@@ -111,8 +112,8 @@ label{
 }
 
 .foto{
-    width: 400px;
-    min-height: 280px;
+    width: 580px;
+    min-height: 420px;
     height: auto;
     float: left;
     margin: 15px 0 0 0;
@@ -135,6 +136,7 @@ label{
     padding: 5px;
     overflow: scroll;
     background: #fff;
+    margin: 15px 0 0 0;
 }
 .titulo{
     width: 100%;
@@ -145,13 +147,36 @@ label{
     text-shadow: 1px 1px #888;
     color: #fff;
 }
+form.accion{
+    float:left;
+    width: 100%;
+    margin: 10px 0;
+}
 form.controles{
     width:100%;
+    border: 0px solid red;
+    float:left;
+    margin: 10px 0;
 }
-form.controles > input[type="range"]{
+input[type="range"]{
+    -webkit-appearance: none;
+}
+input[type="range"]{
     width: 90%;
-    height: 20px;
+    height: 10px;
     margin: 10px 0 0 0;
+}
+input[type="range"]::-webkit-slider-runnable-track{
+    border-radius: 3px;
+}
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: 1px solid #fff;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: radial-gradient(#0099ff, #27f);
+    margin-top: -2px;
 }
 span.bri,
 span.dif,
@@ -170,14 +195,19 @@ h2{
     text-shadow: 1px 1px 2px rgba(128,128, 128, 0.5);
     padding: 10px 0 20px 10px;
 }
+@keyframes telon {
+    from{height: 100%;}
+    to{height: 60px;}
+}
 #borda{
     height: 60px;
-    background: rgba(128, 128, 255, 0.5);
+    background: rgba(128, 12, 138, 0.5);
     width: 100%;
     position: fixed;
     box-shadow: 2px 2px 3px rgba(128, 128, 128, 0.5);
     z-index: 100;
     top:0;
+    animation: telon 2s;
 }
 .aviso{
     width: 760px;
