@@ -18,12 +18,19 @@
  */
 
 $lee_dir = opendir($ruta_mini);
-
+$archivos = [];
 while($archivo = readdir($lee_dir)){
     if(!is_dir($archivo)){
-        echo "<div class=\"mini\">";
-        echo "<img src='".$ruta_mini.$archivo."' nombre='$archivo'>";
-        echo "<a href='procesa.php?nombre=".$archivo."' title='borrar'></a>";        
-        echo "</div>";
+        array_push($archivos, $archivo);
     }
+}
+closedir($lee_dir);
+
+krsort($archivos);
+
+foreach ($archivos as $archivo) {
+    echo "<div class=\"mini\">";
+    echo "<img src='".$ruta_mini.$archivo."' nombre='$archivo'>";
+    echo "<a href='procesa.php?nombre=".$archivo."' title='borrar'></a>";
+    echo "</div>";
 }

@@ -40,8 +40,8 @@ include 'config.php';?>
                 estilo();
             }
             else{
-                alert("nooo");
-                $(".aviso").show("fast");
+                //alert("nooo");
+                $(".aviso").show("slow");
             }
             $(".acepta").click(function(){
                 $(".aviso").fadeOut(300);

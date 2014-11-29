@@ -129,7 +129,7 @@ label{
     border: 1px solid #aaa;
 }
 .fotos{
-    height: 560px;
+    height: 680px;
     min-width: 110px;
     width:90%;
     border: 1px solid #000;
@@ -207,7 +207,7 @@ h2{
     box-shadow: 2px 2px 3px rgba(128, 128, 128, 0.5);
     z-index: 100;
     top:0;
-    animation: telon 2s;
+    /*animation: telon 2s; */
 }
 .aviso{
     width: 760px;
